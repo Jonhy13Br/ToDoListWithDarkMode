@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.conteudo {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.entrada-tarefa {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.entrada-tarefa input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.entrada-tarefa button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.completada {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.botoes-filtro {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.botoes-filtro button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #4f4f4f;
+    color: #444;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.botao-resetar {
+    margin-left: 10px;
+    color: #fff;
+}
+
+.botao-resetar:hover {
+    background-color: #ff3e3e;
+}
+li button:not(:first-child) {
+    margin-left: 8px;
+    border: none;
+    background-color: #7fb1ca;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="checkbox"]:checked::before {
+    background-color: #4CAF50;
+}
+
+.dark-mode {
+    background-color: #333;
+}
+
+.dark-mode button {
+    background-color: #ddd;
+    color: #444;
+}
+
+.light-mode {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.light-mode button {
+    color: #fffdfd;
+}
+
+#darkModeBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #224752;
+    color: #fff;
+    border-radius: 20px; /* Forma redonda */
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 9999;
+}
+
+@media only screen and (max-width: 600px) {
+    .conteudo {
+        max-width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .entrada-tarefa input {
+        font-size: 14px;
+    }
+
+    .entrada-tarefa button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .botoes-filtro button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    li button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
